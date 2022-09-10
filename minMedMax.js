@@ -1,10 +1,10 @@
-const { template } = require('@babel/core')
+//const { template } = require('@babel/core')
 
 function minMedMax(n1, n2, n3) {
   let arr = [n1,n2,n3]
-  let max = n1
-  let mid = n1
-  let min = n1
+  let max = n2
+  let mid = n2
+  let min = n2
 
   for(let number of arr){
     if(number > max)
@@ -12,11 +12,12 @@ function minMedMax(n1, n2, n3) {
     
     if(number < min)
       min = number
-
+  }
+  for(let number of arr){
     if(number<max && number>min)
       mid = number
   }
-
   return {min,mid,max}
 }
-module.exports = minMedMax
+console.log(minMedMax(-8,-1,0))
+//module.exports = minMedMax
